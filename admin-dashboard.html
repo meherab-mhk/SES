@@ -13,7 +13,7 @@
     <meta property="og:url" content="http://pratikborsadiya.in/blog/vali-admin">
     <meta property="og:image" content="http://pratikborsadiya.in/blog/vali-admin/hero-social.png">
     <meta property="og:description" content="Vali is a responsive and free admin theme built with Bootstrap 4, SASS and PUG.js. It's fully customizable and modular.">
-    <title>Home|SES</title>
+    <title>Admin Home|SES</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -93,13 +93,15 @@
         </div>
       </div>
       <ul class="app-menu">
-        <li><a class="app-menu__item active" href="faculty-dashboard.html"><span class="app-menu__label">Home</span></a></li>
+        <li><a class="app-menu__item active" href="admin-dashboard.html"><span class="app-menu__label">Home</span></a></li>
         <li><a class="app-menu__item " href="student.html"><span class="app-menu__label">Student</span></a></li>
+        <li><a class="app-menu__item " href="view_student_list.html"><span class="app-menu__label">View Student</span></a></li>
         <li><a class="app-menu__item " href="grades.html"><span class="app-menu__label">Grades</span></a></li>
         <li><a class="app-menu__item " href="department.html"><span class="app-menu__label">Department</span></a></li>
         <li><a class="app-menu__item " href="curriculum.html"><span class="app-menu__label">Curriculum</span></a></li>
-        <li><a class="app-menu__item " href="#"><span class="app-menu__label">Manage User</span></a></li>
+        <li><a class="app-menu__item " href="manage-user.html"><span class="app-menu__label">Add Faculty</span></a></li>
         <li><a class="app-menu__item " href="pre-requisite.html"><span class="app-menu__label">Pre-requisite</span></a></li>
+        <li><a class="app-menu__item " href="fac_reg_course.html"><span class="app-menu__label">Course Register to Faculty</span></a></li>
         <!-- <li class="treeview"><a class="app-menu__item" href="#" data-toggle="treeview"><i class="app-menu__icon fa fa-laptop"></i><span class="app-menu__label">UI Elements</span><i class="treeview-indicator fa fa-angle-right"></i></a>
           <ul class="treeview-menu">
             <li><a class="treeview-item" href="bootstrap-components.html"><i class="icon fa fa-circle-o"></i> Bootstrap Elements</a></li>
@@ -159,6 +161,15 @@
           </a>
         </div>
         <div class="col-md-6 col-lg-4">
+          <a href="view_student_list.html">
+            <div class="widget-small dupain coloured-icon"><i class="icon fa fa-list-alt fa-3x"></i>
+              <div class="info">
+                <h4>View Student List</h4>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-6 col-lg-4" >
           <a href="grades.html">
             <div class="widget-small info coloured-icon"><i class="icon fa fa-graduation-cap fa-3x"></i>
               <div class="info">
@@ -186,10 +197,11 @@
           </a>
         </div>
         <div class="col-md-6 col-lg-4">
-          <a href="#">
-            <div class="widget-small violet coloured-icon"><i class="icon fa fa-user-circle-o fa-3x"></i>
+          <a href="manage-user.html">
+            <div class="widget-small violet coloured-icon"><i class="icon fa fa-user-plus fa-3x"></i>
+
               <div class="info">
-                <h4>Manage User</h4>
+                <h4>Add Faculty</h4>
               </div>
             </div>
           </a>
@@ -203,7 +215,52 @@
             </div>
           </a>
         </div>
+        <div class="col-md-6 col-lg-4">
+          <a href="fac_reg_course.html">
+            <div class="widget-small blue coloured-icon"><i class="icon fa fa-registered fa-3x"></i>
+
+              <div class="info">
+                <h4>Course Register to Faculty</h4>
+              </div>
+            </div>
+          </a>
+        </div>
       </div>
+      <!--Footer section-->
+      <section id="footer">
+        <div class="row">
+            <div class="footer-section">
+              <p>The Product Design & Developed By:</p>
+              <div class="row">
+                <div class="col-lg-3">
+                  <div class="team-img">
+                    <img src="images/unnamed.jpg" alt="Meherab Hossain img" class="img-fluid">
+                    <p>Meherab Hossain</p>
+                  </div>
+                </div>
+                <div class="col-lg-3">
+                  <div class="team-img">
+                    <img src="images/nurnobi.jpg" alt="Nurnobi Hossain img" class="img-fluid">
+                    <p>Nurnobi Hossain</p>
+                  </div>
+                </div>
+                <div class="col-lg-3">
+                  <div class="team-img">
+                    <img src="images/hur.jpg" alt="Hur-E-Jannat img" class="img-fluid">
+                    <p>Hur-E-Jannat</p>
+                  </div>
+                </div>
+                <div class="col-lg-3">
+                  <div class="team-img">
+                    <img src="images/rahnuma.jpg" alt="Rahnuma Rah img" class="img-fluid">
+                    <p>Rahnuma Audry</p>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+        </div>
+    </section>
       <!-- <div class="row">
         <div class="col-md-6">
           <div class="tile">

@@ -93,13 +93,15 @@
         </div>
       </div>
       <ul class="app-menu">
-        <li><a class="app-menu__item" href="faculty-dashboard.html"><span class="app-menu__label">Home</span></a></li>
+        <li><a class="app-menu__item" href="admin-dashboard.html"><span class="app-menu__label">Home</span></a></li>
         <li><a class="app-menu__item " href="student.html"><span class="app-menu__label">Student</span></a></li>
+        <li><a class="app-menu__item " href="view_student_list.html"><span class="app-menu__label">View Student</span></a></li>
         <li><a class="app-menu__item " href="grades.html"><span class="app-menu__label">Grades</span></a></li>
         <li><a class="app-menu__item " href="department.html"><span class="app-menu__label">Department</span></a></li>
         <li><a class="app-menu__item " href="curriculum.html"><span class="app-menu__label">Curriculum</span></a></li>
-        <li><a class="app-menu__item " href="#"><span class="app-menu__label">Manage User</span></a></li>
+        <li><a class="app-menu__item " href="manage-user.html"><span class="app-menu__label">Add Faculty</span></a></li>
         <li><a class="app-menu__item active" href="pre-requisite.html"><span class="app-menu__label">Pre-requisite</span></a></li>
+        <li><a class="app-menu__item " href="fac_reg_course.html"><span class="app-menu__label">Course Register to Faculty</span></a></li>
         <!-- <li class="treeview"><a class="app-menu__item" href="#" data-toggle="treeview"><i class="app-menu__icon fa fa-laptop"></i><span class="app-menu__label">UI Elements</span><i class="treeview-indicator fa fa-angle-right"></i></a>
           <ul class="treeview-menu">
             <li><a class="treeview-item" href="bootstrap-components.html"><i class="icon fa fa-circle-o"></i> Bootstrap Elements</a></li>
@@ -163,7 +165,7 @@
       </div><br>
       <div class="row">
           
-          <div class="col-md-4">
+          <div class="col-md-3">
             <form>
                 <div class="form-group">
                   <label for="formGroupExampleInput">Course No</label>
@@ -174,6 +176,10 @@
                   <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Course Title">
                 </div>
                 <div class="form-group">
+                  <label for="formGroupExampleInput2">Department</label>
+                  <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Department">
+              </div>
+                <div class="form-group">
                     <label for="formGroupExampleInput2">Semester</label>
                     <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Semester">
                 </div>
@@ -182,10 +188,11 @@
                     <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Pre-requisite Course No">
                 </div>
                 <button class="btn btn-primary my-4 my-sm-0 mr-sm-2" type="submit">Save</button>
-                <button class="btn btn-primary my-4 my-sm-0 mr-sm-2" type="reload">Reset</button>
+                <button class="btn btn-danger my-4 my-sm-0 mr-sm-2" type="submit">Delete</button>
+                <button class="btn btn-info my-4 my-sm-0 mr-sm-2" type="reload">Reset</button>
               </form>
           </div>
-          <div class="col-md-8">
+          <div class="col-md-9">
             <div class="clearfix"></div>
             <div class="col-md-12">
               <div class="tile">
@@ -200,7 +207,8 @@
                         <th>Department</th>
                         <th>Semester</th>
                         <th>Credit</th>
-                        <th>Pre-requisite Course</th>
+                        <th>Pre-req Course</th>
+                        <th>Action</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -212,6 +220,31 @@
                         <td>3rd</td>
                         <td>3</td>
                         <td>CSE-212</td>
+                        <td>
+                          <div class="action_icon">
+                            <a href="#" class="badge badge-primary">Edit</a>
+                            <a href="#" class="badge badge-danger" data-toggle="modal" data-target="#exampleModal">Delete</a>
+                          </div>
+                          <!-- Modal -->
+                          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <h5 class="modal-title" id="exampleModalLabel">Are you want to delete?</h5>
+                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                  </button>
+                                </div>
+                                
+                                <div class="modal-footer">
+                                  <button type="button" class="btn btn-primary">Yes</button>
+                                  <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          
+                        </td>
                       </tr>
                       <tr>
                         <td>2</td>
@@ -221,6 +254,31 @@
                         <td>3rd</td>
                         <td>3</td>
                         <td>CSE-212</td>
+                        <td>
+                          <div class="action_icon">
+                            <a href="#" class="badge badge-primary">Edit</a>
+                            <a href="#" class="badge badge-danger" data-toggle="modal" data-target="#exampleModal">Delete</a>
+                          </div>
+                          <!-- Modal -->
+                          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <h5 class="modal-title" id="exampleModalLabel">Are you want to delete?</h5>
+                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                  </button>
+                                </div>
+                                
+                                <div class="modal-footer">
+                                  <button type="button" class="btn btn-primary">Yes</button>
+                                  <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          
+                        </td>
                       </tr>
                       <tr>
                         <td>3</td>
@@ -230,6 +288,31 @@
                         <td>3rd</td>
                         <td>3</td>
                         <td>CSE-212</td>
+                        <td>
+                          <div class="action_icon">
+                            <a href="#" class="badge badge-primary">Edit</a>
+                            <a href="#" class="badge badge-danger" data-toggle="modal" data-target="#exampleModal">Delete</a>
+                          </div>
+                          <!-- Modal -->
+                          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <h5 class="modal-title" id="exampleModalLabel">Are you want to delete?</h5>
+                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                  </button>
+                                </div>
+                                
+                                <div class="modal-footer">
+                                  <button type="button" class="btn btn-primary">Yes</button>
+                                  <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          
+                        </td>
                       </tr>
                       <tr>
                         <td>4</td>
@@ -239,6 +322,31 @@
                         <td>3rd</td>
                         <td>3</td>
                         <td>CSE-212</td>
+                        <td>
+                          <div class="action_icon">
+                            <a href="#" class="badge badge-primary">Edit</a>
+                            <a href="#" class="badge badge-danger" data-toggle="modal" data-target="#exampleModal">Delete</a>
+                          </div>
+                          <!-- Modal -->
+                          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <h5 class="modal-title" id="exampleModalLabel">Are you want to delete?</h5>
+                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                  </button>
+                                </div>
+                                
+                                <div class="modal-footer">
+                                  <button type="button" class="btn btn-primary">Yes</button>
+                                  <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          
+                        </td>
                       </tr>
                     </tbody>
                   </table>

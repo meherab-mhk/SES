@@ -13,7 +13,7 @@
     <meta property="og:url" content="http://pratikborsadiya.in/blog/vali-admin">
     <meta property="og:image" content="http://pratikborsadiya.in/blog/vali-admin/hero-social.png">
     <meta property="og:description" content="Vali is a responsive and free admin theme built with Bootstrap 4, SASS and PUG.js. It's fully customizable and modular.">
-    <title>Manage User|SES</title>
+    <title>Add Faculty|SES</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -93,13 +93,15 @@
         </div>
       </div>
       <ul class="app-menu">
-        <li><a class="app-menu__item" href="faculty-dashboard.html"><span class="app-menu__label">Home</span></a></li>
+        <li><a class="app-menu__item" href="admin-dashboard.html"><span class="app-menu__label">Home</span></a></li>
         <li><a class="app-menu__item " href="student.html"><span class="app-menu__label">Student</span></a></li>
+        <li><a class="app-menu__item " href="view_student_list.html"><span class="app-menu__label">View Student</span></a></li>
         <li><a class="app-menu__item " href="grades.html"><span class="app-menu__label">Grades</span></a></li>
         <li><a class="app-menu__item " href="department.html"><span class="app-menu__label">Department</span></a></li>
         <li><a class="app-menu__item " href="curriculum.html"><span class="app-menu__label">Curriculum</span></a></li>
-        <li><a class="app-menu__item active" href="manage-user.html"><span class="app-menu__label">Manage User</span></a></li>
+        <li><a class="app-menu__item active" href="manage-user.html"><span class="app-menu__label">Add Faculty</span></a></li>
         <li><a class="app-menu__item " href="pre-requisite.html"><span class="app-menu__label">Pre-requisite</span></a></li>
+        <li><a class="app-menu__item " href="fac_reg_course.html"><span class="app-menu__label">Course Register to Faculty</span></a></li>
         <!-- <li class="treeview"><a class="app-menu__item" href="#" data-toggle="treeview"><i class="app-menu__icon fa fa-laptop"></i><span class="app-menu__label">UI Elements</span><i class="treeview-indicator fa fa-angle-right"></i></a>
           <ul class="treeview-menu">
             <li><a class="treeview-item" href="bootstrap-components.html"><i class="icon fa fa-circle-o"></i> Bootstrap Elements</a></li>
@@ -141,11 +143,11 @@
     <main class="app-content">
       <div class="app-title">
         <div>
-          <h1> Manage User</h1>
+          <h1> Add Faculty</h1>
         </div>
         <ul class="app-breadcrumb breadcrumb">
           <li class="breadcrumb-item"><i class="fa fa-home fa-lg"></i></li>
-          <li class="breadcrumb-item"><a href="#">Manage User</a></li>
+          <li class="breadcrumb-item"><a href="#">Add Faculty</a></li>
         </ul>
       </div>
       <!-- <div class="row">
@@ -163,45 +165,48 @@
       </div><br> -->
       <div class="row">
           
-          <div class="col-md-4">
+          <div class="col-md-3">
             <form>
+              <div class="form-group">
+                <label for="formGroupExampleInput">Faculty No</label>
+                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Faculty No">
+              </div>
                 <div class="form-group">
-                  <label for="formGroupExampleInput">User ID</label>
-                  <input type="text" class="form-control" id="formGroupExampleInput" placeholder="User ID">
+                  <label for="formGroupExampleInput">Faculty Code</label>
+                  <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Faculty Code">
                 </div>
                 <div class="form-group">
-                  <label for="formGroupExampleInput2">User Name</label>
+                  <label for="formGroupExampleInput2">Faculty Fullname</label>
+                  <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Fullname">
+                </div>
+                <div class="form-group">
+                  <label for="formGroupExampleInput2">Faculty Username</label>
                   <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="User Name">
                 </div>
                 <div class="form-group">
                     <label for="formGroupExampleInput2">Password</label>
                     <input type="password" class="form-control" id="formGroupExampleInput2" placeholder="Password">
                 </div>
-                <div class="form-group">
-                    <label for="inputState">User Type</label>
-                    <select id="inputState" class="form-control">
-                      <option selected>Choose...</option>
-                      <option>...</option>
-                    </select>
-                </div>
                 <button class="btn btn-primary my-4 my-sm-0 mr-sm-2" type="submit">Save</button>
                 <button class="btn btn-danger my-4 my-sm-0 mr-sm-2" type="submit">Delete</button>
-                <button class="btn btn-primary my-4 my-sm-0 mr-sm-2" type="reload">Clear</button>
+                <button class="btn btn-info my-4 my-sm-0 mr-sm-2" type="reload">Clear</button>
               </form>
           </div>
-          <div class="col-md-8">
+          <div class="col-md-9">
             <div class="clearfix"></div>
             <div class="col-md-12">
               <div class="tile">
-                <h3 class="tile-title">User Data</h3>
+                <h3 class="tile-title">Faculty User Data</h3>
                 <div class="table-responsive">
                   <table class="table">
                     <thead>
                       <tr>
-                        <th>User ID</th>
-                        <th>User Name</th>
+                        <th>Faculty No</th>
+                        <th>Faculty Code</th>
+                        <th>Faculty Fullname</th>
+                        <th>Username</th>
                         <th>Password</th>
-                        <th>User Type</th>
+                        <th>Action</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -210,24 +215,128 @@
                         <td>Shon@moe</td>
                         <td>shonmoe@123</td>
                         <td>Admin</td>
+                        <td>shonmoe@123</td>
+                        <td>
+                          <div class="action_icon">
+                            <a href="#" class="badge badge-primary">Edit</a>
+                            <a href="#" class="badge badge-danger" data-toggle="modal" data-target="#exampleModal">Delete</a>
+                          </div>
+                          <!-- Modal -->
+                          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <h5 class="modal-title" id="exampleModalLabel">Are you want to delete?</h5>
+                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                  </button>
+                                </div>
+                                
+                                <div class="modal-footer">
+                                  <button type="button" class="btn btn-primary">Yes</button>
+                                  <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          
+                        </td>
                       </tr>
                       <tr>
                         <td>2</td>
                         <td>john@doe</td>
                         <td>johndoe@123</td>
                         <td>Faculty</td>
+                        <td>shonmoe@123</td>
+                        <td>
+                          <div class="action_icon">
+                            <a href="#" class="badge badge-primary">Edit</a>
+                            <a href="#" class="badge badge-danger" data-toggle="modal" data-target="#exampleModal">Delete</a>
+                          </div>
+                          <!-- Modal -->
+                          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <h5 class="modal-title" id="exampleModalLabel">Are you want to delete?</h5>
+                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                  </button>
+                                </div>
+                                
+                                <div class="modal-footer">
+                                  <button type="button" class="btn btn-primary">Yes</button>
+                                  <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          
+                        </td>
                       </tr>
                       <tr>
                         <td>3</td>
                         <td>john@doe</td>
                         <td>johndoe@123</td>
                         <td>Faculty</td>
+                        <td>shonmoe@123</td>
+                        <td>
+                          <div class="action_icon">
+                            <a href="#" class="badge badge-primary">Edit</a>
+                            <a href="#" class="badge badge-danger" data-toggle="modal" data-target="#exampleModal">Delete</a>
+                          </div>
+                          <!-- Modal -->
+                          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <h5 class="modal-title" id="exampleModalLabel">Are you want to delete?</h5>
+                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                  </button>
+                                </div>
+                                
+                                <div class="modal-footer">
+                                  <button type="button" class="btn btn-primary">Yes</button>
+                                  <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          
+                        </td>
                       </tr>
                       <tr>
                         <td>4</td>
                         <td>john@doe</td>
                         <td>johndoe@123</td>
                         <td>Faculty</td>
+                        <td>shonmoe@123</td>
+                        <td>
+                          <div class="action_icon">
+                            <a href="#" class="badge badge-primary">Edit</a>
+                            <a href="#" class="badge badge-danger" data-toggle="modal" data-target="#exampleModal">Delete</a>
+                          </div>
+                          <!-- Modal -->
+                          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <h5 class="modal-title" id="exampleModalLabel">Are you want to delete?</h5>
+                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                  </button>
+                                </div>
+                                
+                                <div class="modal-footer">
+                                  <button type="button" class="btn btn-primary">Yes</button>
+                                  <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          
+                        </td>
                       </tr>
                     </tbody>
                   </table>
